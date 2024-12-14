@@ -9,3 +9,16 @@ spec:
   ports:
     - port: 8082
       targetPort: 80
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: testpod2
+  labels:
+   app: aig
+spec:
+  containers:
+  - image: nginx
+    name: testpod2
+    ports:
+    - containerPort: 80      
