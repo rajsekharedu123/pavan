@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: samdepl
+  annotations:
+   kubernetes.io/change-cause: "upadating to alpine "
 spec:
   replicas: 3
   selector:
@@ -15,6 +17,7 @@ spec:
       spec:
         containers:
           - name: cont1
-            image: nginx:latest
+            image: nginx:alpine
             ports:  
             - containerPort: 80 
+---
