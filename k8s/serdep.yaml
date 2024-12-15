@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: samdepl
+  annotations:
+   kubernetes.io/change-cause: "upadating to alpine "
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: aig
+  template:
+      metadata:
+        name: testpod4
+        labels:
+          app: aig
+      spec:
+        containers:
+          - name: cont1
+            image: nginx:alpine
+            ports:  
+            - containerPort: 80 
