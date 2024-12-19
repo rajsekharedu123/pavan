@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: ndp-svc
+  name: lbs-svc
 spec:
   type: LoadBalancer
   selector:
