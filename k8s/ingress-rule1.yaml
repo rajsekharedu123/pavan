@@ -11,6 +11,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: clsvc
+            name: ndp-svc
             port:
               number: 80

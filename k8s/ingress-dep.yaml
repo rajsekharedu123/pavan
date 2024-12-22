@@ -22,11 +22,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: clsvc
+  name: ndp-svc
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
    app: hewitt
   ports:
     - port: 8082
       targetPort: 80
+      nodePort: 30007
